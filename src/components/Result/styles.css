@@ -1,7 +1,13 @@
 .result{
+display: flex;    
 height: 50px;
 }
 
 .result:nth-child(odd){
     background: rgba(211, 211, 211, 0.3);
+}
+
+.offset{
+    width: 20px;
+    background: white;
 }
