@@ -1,0 +1,7 @@
+.result{
+height: 50px;
+}
+
+.result:nth-child(odd){
+    background: rgba(211, 211, 211, 0.3)
+}

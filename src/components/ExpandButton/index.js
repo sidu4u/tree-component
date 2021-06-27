@@ -1,6 +1,6 @@
 //import react from "react";
 export default function ExpandButton({isExpanded,toggeExpand}){
-return (<div onClick={toggeExpand}>
+return (<span onClick={toggeExpand}>
         {isExpanded?'+':'-'}
-    </div>);
+    </span>);
 }

@@ -1,6 +1,7 @@
 //import react from "react";
+import './styles.css';
 export default function TextArea({text}){
-    return (<h4>
+    return (<div className="textArea">
             {text}
-        </h4>);
+        </div>);
     }
