@@ -1,6 +1,6 @@
 import {useState,useRef,useCallback} from 'react';
 import TextArea from '../TextArea';
-import ExpanButton from '../ExpandButton';
+import ExpandButton from '../ExpandButton';
 import ResultList from '../ResultList';
 import './styles.css';
 
@@ -12,7 +12,7 @@ function Objective(props) {
 
   return(
       <div className="objective">
-      {isExpandable.current && <ExpanButton isExpanded={isExpandable} toggeExpand={toggleExpandCallback}/>}
+      {isExpandable.current && <ExpandButton isExpanded={isExpanded} toggeExpand={toggleExpandCallback}/>}
         <div>
           <TextArea text={data.title}/>
           {data.children && isExpanded && <ResultList results={data.children}/>}

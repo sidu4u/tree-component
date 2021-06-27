@@ -1,6 +1,7 @@
-//import react from "react";
+import './styles.css';
+
 export default function ExpandButton({isExpanded,toggeExpand}){
-return (<span onClick={toggeExpand}>
-        {isExpanded?'+':'-'}
+return (<span className="expandButton" onClick={toggeExpand}>
+        {isExpanded?'-':'+'}
     </span>);
 }

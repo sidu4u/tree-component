@@ -3,7 +3,8 @@ return fetch('https://okrcentral.github.io/sample-okrs/db.json')
        .then(response=>response.json())
        .then(parsedResponse => {
             //console.log('test:',parsedResponse.data.filter(element=>element.id===2));
-           return perge(checkNesting(parsedResponse.data));
+
+           return {okrs:perge(checkNesting(parsedResponse.data)),categories:getCategories(parsedResponse.data)};
         })
 }
 
@@ -11,6 +12,14 @@ return fetch('https://okrcentral.github.io/sample-okrs/db.json')
 function isEmpty(value){
     return value === "";
   }
+
+function getCategories(data){
+  const categorySet = new Set();
+
+  Object.values(data).forEach(value=>categorySet.add(value.category));
+
+  return [...categorySet];
+}  
 
 function perge(data){
     const perged = {};
