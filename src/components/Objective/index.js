@@ -11,13 +11,15 @@ function Objective(props) {
   let toggleExpandCallback = useCallback(()=>toggleExpand(!isExpanded),[isExpanded]);
 
   return(
-      <div className="objective">
-      {isExpandable.current && <ExpandButton isExpanded={isExpanded} toggeExpand={toggleExpandCallback}/>}
-        <div>
+    <div>
+        <div className="header">
+          {isExpandable.current && <ExpandButton isExpanded={isExpanded} toggeExpand={toggleExpandCallback}/>}
           <TextArea text={data.title}/>
+        </div>
+        <div>
           {data.children && isExpanded && <ResultList results={data.children}/>}
         </div>
-      </div>
+    </div>
   )
 }
 

@@ -1,7 +1,7 @@
 import './styles.css';
 
 export default function ExpandButton({isExpanded,toggeExpand}){
-return (<span className="expandButton" onClick={toggeExpand}>
-        {isExpanded?'-':'+'}
-    </span>);
+return (<div className="expandButton" onClick={toggeExpand}>
+       {isExpanded?'-':'+'}
+    </div>);
 }
